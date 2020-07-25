@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    #    如果Mysql 数据库的版本是 6.0 以上，请用最新驱动版本
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf8  记得加时区的参数
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: gemini0609
