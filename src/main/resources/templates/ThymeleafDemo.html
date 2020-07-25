@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>ThymeleafDemo</title>
+    <link rel="stylesheet" th:href="@{/myClass.css}">
+</head>
+<body>
+<h1>这是Thymeleaf功能演示界面</h1>
+<h1>Thymeleaf 不会破坏原型</h1>
+<hr>
+<div style="color:fuchsia" th:text="${text}">转义显示提示信息</div>
+<div style="color:fuchsia" >[[${text}]]</div>
+<hr>
+<div style="color:fuchsia" th:utext="${text}">不转义显示提示信息</div>
+<div style="color:fuchsia" >[(${text})]</div>
+<hr>
+<div class="myClass" th:id="${id}">
+    演示加载 CSS 样式效果
+</div>
+<hr>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>BookName</th>
+    </tr>
+
+    <tr th:each="book,status : ${bookList}">
+        <td th:text="${book.id}">ID1</td>
+        <td th:text="${book.name}"> BookName1</td>
+    </tr>
+
+
+</table>
+</body>
+</html>
