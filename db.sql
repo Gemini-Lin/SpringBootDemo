@@ -1,6 +1,6 @@
-drop database if exists demo2;
-create database demo2;
-use demo2;
+drop database if exists demo;
+create database demo;
+use demo;
 create table `Admin`(
   id int auto_increment,
   loginName varchar(255),
@@ -10,7 +10,7 @@ create table `Admin`(
   primary key (id)
 );
 insert into `Admin`(loginName,password) values('admin','admin123');
-create table `Clazz`(
+create table `MyClass`(
   id int auto_increment,
   name varchar(255),
   studentCount int,
