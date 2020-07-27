@@ -4,7 +4,9 @@ import cn.geminiplanet.springbootdemo.common.domain.Admin;
 import cn.geminiplanet.springbootdemo.common.domain.AdminExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface AdminMapper {
     long countByExample(AdminExample example);
 

@@ -1,6 +1,8 @@
 package cn.geminiplanet.springbootdemo;
 
+import cn.geminiplanet.springbootdemo.common.domain.Admin;
 import cn.geminiplanet.springbootdemo.common.domain.MyClass;
+import cn.geminiplanet.springbootdemo.mapper.AdminMapper;
 import cn.geminiplanet.springbootdemo.mapper.MyClassMapper;
 import javafx.application.Application;
 import org.junit.jupiter.api.Test;
@@ -17,6 +19,9 @@ class MapperTest {
     @Autowired(required = false)
     MyClassMapper myClassMapper = null;
 
+    @Autowired
+    AdminMapper adminMapper;
+
     @Test
     void test() {
         for (int i = 0; i < 100; i++) {
@@ -26,6 +31,14 @@ class MapperTest {
             myClass.setStudentcount((int)(Math.random()*200));
             myClassMapper.insert(myClass);
         }
+    }
+
+    @Test
+    void test3() {
+        Admin admin = new Admin();
+        admin.setLoginname("Gemini");
+        admin.setPassword("06094619");
+        adminMapper.insert(admin);
     }
 
 }

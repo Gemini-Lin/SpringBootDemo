@@ -10,4 +10,9 @@ public class PageController {
     public String toPage(@PathVariable("path") String p){
         return "/views/"+p;
     }
+
+    @RequestMapping("/")
+    public String toIndex(){
+        return "/login";
+    }
 }
